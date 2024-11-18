@@ -66,8 +66,9 @@ class UndirectedGraph(DirectedGraph):
         
     def addEdge(self, edge):
         DirectedGraph.addEdge(self, edge)
-        edgeBack = Edge(edge.getV2(), edge.getV1())
+        edgeBack = Edge(edge.getN2(), edge.getN1())
         DirectedGraph.addEdge(self, edgeBack)
+
         
 
 
@@ -84,5 +85,5 @@ def buildGrafh(graph):
     
 
 
-G1 = buildGrafh(DirectedGraph)
+G1 = buildGrafh(UndirectedGraph)
 print(G1)
